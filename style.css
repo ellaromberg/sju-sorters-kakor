@@ -1,0 +1,223 @@
+
+/* Grundinställningar för hemsidan */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F8F0E5;
+    color: #49343A;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Sidhuvud - rubrik och introduktion */
+
+header {
+    background-color: #F6E9E5;
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 4px solid #EED6D8;
+}
+
+header h1 {
+    color: #773e4d;
+    font-family: Georgia, serif;
+    font-size: 44px;
+    margin: 10px 0;
+}
+
+header p {
+    max-width: 750px;
+    margin: 15px auto;
+}
+
+/* Bilder och bildtexter */
+
+figure {
+    margin: 20px auto;
+}
+
+figure img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    /* Lägger till en 5px bred vit ram runt bilden. */
+    border: 5px solid white;
+    /* Rundar av bildens hörn med 12px. */
+    border-radius: 12px;
+}
+
+figcaption {
+    color: #936A70;
+    font-size: 13px;
+    font-style: italic;
+    margin-top: 8px;
+}
+
+/* Navigeringsmeny */
+
+nav {
+    background-color: #773D4B;
+    padding: 15px;
+    background-image: url("images/duk-webb-unspash.jpg");
+    /*(Bildkälla: Unsplash.)
+    Bilden upprepas endast vågrätt.*/
+    background-repeat: repeat-x;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 13px;
+    /* gör att hela det inre området blir klickbart. */
+    display: block;
+    border-radius: 20px;
+    /* Gör att ändringar av bakgrundsfärgen sker gradvis när man håller muspekaren över länken */
+    transition: background-color 0.3s;
+}
+
+/* Visar hur länkarna förändras vid hovring */
+
+nav a:hover {
+    background-color: #EED6D8;
+    color: #773D4B;
+}
+
+/* Rubriken innehåll */
+
+body > h2 {
+    text-align: center;
+    color: #773D4B;
+    font-size: 28px;
+    margin: 35px 0 20px;
+}
+
+/* Huvudinnehåll och receptsektioner */
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: #FFFFFF;
+    margin: 30px 0;
+    padding: 25px;
+    border: 2px solid #EED6D8;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(119, 61, 75, 0.08);
+}
+
+/* Rubriker för varje kaka */
+
+section h2 {
+    color: #773D4B;
+    font-size: 30px;
+    border-bottom: 2px solid #EED6D8;
+    padding-bottom: 10px;
+}
+
+/* Underrubriker för ingredienser och instruktioner */
+
+section h3,
+section h4 {
+    color: #A85F70;
+}
+
+/* Receptbilder centreras */
+
+section figure {
+    text-align: center;
+}
+
+/* Begränsar textens radlängd för bättre läsbarhet */
+
+section p {
+    max-width: 750px;
+}
+
+/* Avstånd i ingredienslistor och instruktioner */
+
+section li {
+    padding: 3px 0;
+}
+
+/* "Tillbaka till toppen" */
+
+main > h3 {
+    text-align: center;
+    padding: 20px;
+}
+
+main > h3 a {
+    color: #773D4B;
+    text-decoration: none;
+}
+
+main > h3 a:hover {
+    color: #A85F70;
+    text-decoration: underline;
+}
+
+/* Anpassning för mobilskärmar */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    section h2 {
+        font-size: 25px;
+    }
+}
+
+/* Avlång intoduktionsbild i headern */
+
+.header-bilder {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.header-bilder div {
+    width: 800px;
+}
+
+.header-bilder img {
+    width: 100%;
+    max-width: none;
+    height: 350px;
+    object-fit: cover;
+    margin: 0;
+}
+
+.header-bilder figcaption {
+    text-align: center;
+}
